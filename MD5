@@ -1,4 +1,4 @@
-82839d416e9c11a09611c8eb34584076 *DESCRIPTION
+b38a861de1838e24c734ccd47c2900e6 *DESCRIPTION
 7d134f1730c2ba98e3c7728771cc402e *NAMESPACE
 2839ad1bd7938eae2427c002024f49a9 *R/RcppExports.R
 2a09a1fbb374fd00ec91c619ca593422 *R/covariance_importance.R
@@ -6,9 +6,8 @@ bcd5d78455085586aec6ef3c71b44fc6 *R/fit-class.R
 25e91bc1326fb6018f2597640fd26f96 *R/initial-class.R
 5809f18b28697aa602c4b4657c3e2ee6 *R/model-class.R
 13d15dfbfc7f7cd66e4222966984236c *R/pompp-package.R
-874cc1eb065aedd3deff0d973a2c657c *R/pompp.R
+1420923cb7527ff5f9245afc99f02f5c *R/pompp.R
 2313b03ac0659e801d1e7f93914eeaf4 *R/prior-class.R
-0a159a28d69a7cd5372505415f376d24 *TODO
 5f63efd3bb50a7e006e7eb57a07a65f0 *man/BetaDeltaPrior-class.Rd
 b18aa2407b817293ecb2f39eb0958e5e *man/GammaPrior-class.Rd
 5a8f7f040d05ee9444cd4ead9a3f84ff *man/GammaPrior.Rd
@@ -25,11 +24,12 @@ cbbd50145df882dc79cec1ae4b7d1b8c *man/initial.Rd
 4ee5dbdd55de698dc0a675256fee7bae *man/pompp_prior-class.Rd
 e832d0d0b901599e4ee918369d3b2d0d *man/prior.Rd
 8fdfd6fb9d33e0aac8f44713a0fe247a *src/BinaryRegression.cpp
-7d3da25dd9dd437602979b1201418122 *src/GaussianProcess.cpp
+6a207428844beaec03692d029d0d7a92 *src/GaussianProcess.cpp
 5413434cbb6c6127b2c648981ffdc460 *src/Makevars
 5413434cbb6c6127b2c648981ffdc460 *src/Makevars.win
+3c00a435376c0c70ed17b788107fc5aa *src/MarkovChain.cpp
 9a43f2e70eb97318b7bc9539e6ab3367 *src/PolyaGammaSampler.c
-49eca8cad2f858cc00c5b9898fc1944d *src/PresenceOnly.cpp
+cb70f0ce5551afed9020ad77b60830d5 *src/PresenceOnly.cpp
 baa87a74753743e17774eff61260cc44 *src/RcppExports.cpp
 55e28e903146f50915f7c3ded689761f *src/RegressionPrior.cpp
 c0009c10725f448a8a8f7ac41bfc7d95 *src/include/BackgroundVariables.hpp
@@ -37,9 +37,9 @@ c0009c10725f448a8a8f7ac41bfc7d95 *src/include/BackgroundVariables.hpp
 8c044be5f8a2cc708772c24ad2ad249c *src/include/CovarianceFunction.hpp
 5088e858c1c3cc2aa1d49b0feda39b02 *src/include/GaussianProcess.hpp
 d6c71cd2a7739dbdbac60083a9eedc22 *src/include/MCMCprogress.hpp
-36431ec23d27c3b0935472475c39b297 *src/include/MarkovChain.hpp
+101c41e61f7d93737cb149777413a82e *src/include/MarkovChain.hpp
 456eee1463f295ecd029f1678a6ff7d7 *src/include/PolyaGammaSampler.h
-fa715a92cc9b89f069589a47e9e215a2 *src/include/PresenceOnly.hpp
+7c426ebc72a7e16c48dc0eda1159b1fa *src/include/PresenceOnly.hpp
 b30aa48506bb66519772cb8bdf388272 *src/include/RegressionPrior.hpp
 bdf9a9e9a3f08a013b120d46c843b3da *src/include/safeR.hpp
-f53af417f6feea2aa98cbee0758801ef *src/r_wrapper.cpp
+38ac6bf6b94318b449c219e7cc71d943 *src/r_wrapper.cpp

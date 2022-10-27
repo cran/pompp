@@ -91,8 +91,6 @@ double PresenceOnly::sampleProcesses() {
 }
 
 double PresenceOnly::updateMarksPars(const Eigen::VectorXd& gp) {
-  double sqrtMarksNugget = sqrt(marksNugget);
-
   Eigen::VectorXd logMarks = -gp;
   logMarks.head(x.rows()) += marks.array().log().matrix();
   logMarks.tail(xprime.rows()) += marksPrime.array().log().matrix();
@@ -115,8 +113,7 @@ double PresenceOnly::updateMarksPars(const Eigen::VectorXd& gp) {
 
 inline double PresenceOnly::applyTransitionKernel() {
   double out, privateOut1, privateOut2;
-  out = sampleProcesses();
-  out += updateLambdaStar();
+  out = sampleProcesses() + updateLambdaStar();
 #pragma omp parallel
 {
 #pragma omp sections
@@ -135,3 +132,4 @@ inline double PresenceOnly::applyTransitionKernel() {
   return out + privateOut1 + privateOut2;
 }
 
+PresenceOnly::~PresenceOnly() {delete beta; delete delta; delete bkg;}

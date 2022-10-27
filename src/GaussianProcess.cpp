@@ -121,15 +121,16 @@ void NNGP::sampleNewPoint(Eigen::VectorXd coords, double& mark,
 #pragma omp parallel for private(finder)
   for (int i = 0; i < neighborhoodSize; i++) {
     for (int j = 0; j < i; j++) {
-      for (finder = 0; finder < neighborhoodSize; finder++)
+      for (finder = 0; finder < neighborhoodSize; finder++) {
         if (pastCovariancesPositions(neighborhood[i], finder) ==
             neighborhood[j]) break;
-        propPrecision(i, j) = finder < neighborhoodSize ?
-          pastCovariances(neighborhood[i], finder) :
-          propPrecision(i, j) = (*covFun)(calcDist(augmentedPositions.row(neighborhood[i]).transpose(),
-                                 augmentedPositions.row(neighborhood[j]).transpose()));
-        propPrecision(j, i) = propPrecision(i, j);
-    }
+        }
+      propPrecision(i, j) = finder < neighborhoodSize ?
+        pastCovariances(neighborhood[i], finder) :
+        propPrecision(i, j) = (*covFun)(calcDist(augmentedPositions.row(neighborhood[i]).transpose(),
+                               augmentedPositions.row(neighborhood[j]).transpose()));
+      propPrecision(j, i) = propPrecision(i, j);
+    } // for j
     propPrecision(i, i) = covFun->getSigma2();
     theseCovariances(i) = (*covFun)(distances(neighborhood[i]));
   }

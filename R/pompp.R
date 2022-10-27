@@ -155,7 +155,7 @@ methods::setMethod("fit_pompp",
                      )
 
                      ## Determining GP hyperparameters
-                     cat("Preparing model parameters.\n")
+                     if (verbose) cat("Preparing model parameters.\n")
                      fitted <- geoR::likfit(
                        geoR::as.geodata(s("po")[,
                          c(s("coordinates"), s("marksSelection"))
@@ -209,7 +209,7 @@ methods::setMethod("fit_pompp",
                        mcmcRun[[c]] <- do.call(cbind, temp[-length(temp)])
                        colnames(mcmcRun[[c]]) <- parnames
                        mcmcRun[[c]] <- coda::mcmc(mcmcRun[[c]], thin = mcmc_setup$thin)
-                       if (chains > 1) cat("Finished chain ",c,".\n\n",sep="")
+                       if (chains > 1 && verbose) cat("Finished chain ",c,".\n\n",sep="")
                      }
                      if (chains > 1 && verbose) cat("Total computation time: ", format(unclass(Sys.time()-time),
                                                                                        digits = 2), " ",

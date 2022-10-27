@@ -97,7 +97,7 @@ List cppPOMPP(Eigen::VectorXd beta, Eigen::VectorXd delta,
   if (verbose) Rcpp::Rcout << "Sampling MCMC.\n";
   double xMarksPrimeSquaredNorm, xMarksSquaredNorm = xMarks.squaredNorm();
   int fullSize;
-  Progress progr_Main(outSize, true);
+  Progress progr_Main(outSize, verbose);
   for (i = 0; i < outSize; i++)
   {
     R_CheckUserInterrupt();
